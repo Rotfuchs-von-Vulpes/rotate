@@ -138,8 +138,8 @@ void init() {
 	loadShader(vertexShader, fragmentShader);
 	loadShader(vertexShader, fragmentShader);
 
-	texture1 = loadTexture("default_wood.png");
-	texture2 = loadTexture("default_sand.png");
+	texture1 = loadTexture("../src/default_wood.png");
+	texture2 = loadTexture("../src/default_sand.png");
 
 	glUseProgram(shaderProgram[0]);
 	glUniform1i(glGetUniformLocation(shaderProgram[0], "texture"), 0);
