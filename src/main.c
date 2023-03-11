@@ -17,11 +17,11 @@ const char *vertexShaderSource =
 	"out vec3 ourColor;\n"
 	"out vec2 TexCoord;\n"
 	"uniform mat4 transform;\n"
-  "void main()\n"
-  "{\n"
-  "  gl_Position = transform*vec4(aPos, 1.0);\n"
+	"void main()\n"
+	"{\n"
+	"  gl_Position = transform*vec4(aPos, 1.0);\n"
 	"  TexCoord = aTexCoord.xy;\n"
-  "}\0";
+	"}\0";
 
 const char *fragmentShaderSource =
 	"#version 330 core\n"
@@ -89,11 +89,11 @@ unsigned int loadTexture(const char *image)
 
 void init() {
 	float vertices[] = {
-    // positions          // colors           // texture coords
-     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
-     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
-    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
+		// positions          // colors           // texture coords
+		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
+		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
+		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
+		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
 	};
 
 	unsigned int indices[] = {  // note that we start from 0!
@@ -150,7 +150,7 @@ void init() {
 }
 
 void render() {
-  glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT);
 
 	glUseProgram(shaderProgram[0]);
 	mat4 trans = GLM_MAT4_IDENTITY_INIT;
